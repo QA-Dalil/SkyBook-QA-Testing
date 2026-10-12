@@ -18,7 +18,6 @@ This gallery indexes the visual evidence behind the [SkyBook QA project](../READ
 
 ## Application and Workbook Evidence
 
-- [BUG-14: enabled Continue button](BUG-14-skybook-enabled-continue-button.png) — the button is enabled with only one of two passengers seated.
 - [BUG-14: seat selection context](BUG-14-skybook-seat-selection.png) — the booking screen during seat selection.
 - [Workbook summary preview](workbook-summary-preview.png) — overview of the recorded test results and defects.
 

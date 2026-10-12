@@ -42,10 +42,8 @@ I tested the [SkyBook practice booking app](https://claude.ai/code/artifact/5028
 
 ## Test evidence
 
-Zephyr shows the test library organized by Epic. The Jira summary shows the project work items. The application screenshot captures BUG-14 with the Continue button enabled before all passengers have seats.
+Zephyr shows the test library organized by Epic. The Jira summary shows the project work items. More screenshots, including the BUG-14 Jira record, are in the [evidence gallery](screenshots/README.md).
 
 ![Zephyr test case library](screenshots/zephyr-test-library.png)
 
 ![Jira project summary](screenshots/jira-project-summary.png)
-
-![BUG-14: Continue enabled with one of two passengers seated](screenshots/BUG-14-skybook-enabled-continue-button.png)
