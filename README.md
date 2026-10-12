@@ -40,7 +40,7 @@ The blocked case, TC-6.3-01, could verify the displayed arithmetic but could not
 - [Bug reports in CSV](bugs/SkyBook_Bug_Reports.csv)
 - [Traceability matrix in CSV](traceability/SkyBook_Traceability_Matrix.csv)
 - [QA project workbook](SkyBook_QA_Project.xlsx)
-- [Screenshot checklist](screenshots/README.md)
+- [Screenshot evidence gallery](screenshots/README.md)
 
 ## Selected Findings
 
@@ -52,57 +52,23 @@ The blocked case, TC-6.3-01, could verify the displayed arithmetic but could not
 - Duplicate seat assignment, negative baggage, and repeated promo discounts were possible.
 - Starting a new booking retained previous trip selections.
 
-## Jira Evidence
+## Evidence Highlights
 
-Jira and Zephyr screenshots can be added to the `screenshots/` folder. The live Jira project URL is omitted from the public repository for privacy.
+The Zephyr library contains 37 test cases organized by Epic. Execution records capture the test steps and their results.
 
-## Screenshots
-
-### Zephyr Test Case Library
-
-The test library contains 37 approved test cases organized into folders that match the seven project Epics.
-
-![Zephyr Test Case Library](screenshots/zephyr-test-library.png)
-
-### Test Case Definition
-
-Each test case documents its objective, preconditions, priority, owner, and Epic-based folder organization.
-
-![Test case details](screenshots/test-case-details.png)
-
-### Requirement Traceability
-
-Zephyr coverage links each test case to the Jira Story it verifies.
-
-![Test case traceability](screenshots/test-case-traceability.png)
-
-### Step-by-Step Test Execution
-
-Execution evidence records each step separately with test data, expected result, actual result, timestamp, and status.
+![Zephyr test case library](screenshots/zephyr-test-library.png)
 
 ![Passed test execution](screenshots/passed-test-execution.png)
 
-### Jira Epics and Bugs
-
-The Jira work-item view shows the seven completed Epics and the reported defects with their priorities and workflow status.
-
-![Jira Epics and Bugs](screenshots/jira-epics-and-bugs.png)
-
-### Jira Project Summary
-
-The project summary shows 51 work items: 27 completed requirements and 24 open defects.
+The Jira summary shows the requirements and defects tracked during this round of testing.
 
 ![Jira project summary](screenshots/jira-project-summary.png)
 
-### BUG-14 — Seat Completion Validation
+**BUG-14 — seat completion validation:** The Continue button remained enabled with only one of two passengers assigned a seat. The [Jira defect record](screenshots/BUG-14-details-and-results.png) documents the steps, expected and actual results; the [attachment and story view](screenshots/BUG-14-attachments-and-story-traceability.png) shows its supporting evidence and requirement link. A [seat selection view](screenshots/BUG-14-skybook-seat-selection.png) provides application context.
 
-The Jira defect record documents the priority, reproduction steps, expected result, actual result, and traceability to `US-4.2` and `TC-4.2-01`.
+![Continue button enabled with one of two passengers seated](screenshots/BUG-14-skybook-enabled-continue-button.png)
 
-![BUG-14 details and results](screenshots/BUG-14-details-and-results.png)
-
-The evidence view shows the professionally named attachments and the linked requirement, including its `Done` status and `Highest` priority.
-
-![BUG-14 attachments and story traceability](screenshots/BUG-14-attachments-and-story-traceability.png)
+See the [full screenshot evidence gallery](screenshots/README.md) for the remaining Jira, Zephyr, application, and workbook images.
 
 ## Notes
 
