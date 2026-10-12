@@ -18,13 +18,15 @@ I tested the [SkyBook practice booking app](https://claude.ai/code/artifact/5028
 
 ## Test results
 
-**37 cases:** 16 PASS · 20 FAIL · 1 BLOCKED. Testing covered functional flows, negative inputs, boundary values, and end-to-end booking. The blocked case could verify the displayed fare arithmetic, but the UI did not expose enough detail to verify the child fare and tax rules.
+**37 cases:** 16 PASS · 20 FAIL · 1 BLOCKED. Executed on **7 September 2026** using positive, negative, boundary, and end-to-end scenarios across search, passenger details, seats, extras, payment, and confirmation.
+
+`TC-6.3-01` was BLOCKED: the displayed arithmetic could be checked, but the UI did not show the individual child fare or tax calculation needed to verify the full pricing rule.
 
 ## Testing highlights
 
-- **Booking validation:** Tested dates, passenger counts, sorting, filters, payment fields, seat assignment, baggage, and promo codes. The [execution report](docs/EXECUTION_REPORT.md) records expected and actual results for each case.
-- **Seat boundary:** In BUG-14, **Continue to extras** was enabled while only one of two passengers had a seat. The [bug report](docs/BUG_REPORTS.md) and [Jira screenshot](screenshots/BUG-14-details-and-results.png) show the reproduction steps and links to `US-4.2` and `TC-4.2-01`.
-- **Traceability:** Connected Epic → Story → Test Case → Bug so a failed result can be followed back to its requirement.
+- **Booking validation:** Found accepted past dates, zero adults, duplicate seats, negative baggage, repeated promo discounts, and incomplete payment details. The [test case CSV](test-cases/SkyBook_Test_Cases.csv) records steps, expected and actual results, and status.
+- **Seat boundary:** In BUG-14, **Continue to extras** was enabled while only one of two passengers had a seat. The [bug CSV](bugs/SkyBook_Bug_Reports.csv) contains reproduction steps and expected versus actual behavior; the [Jira record](screenshots/BUG-14-details-and-results.png) shows links to `US-4.2` and `TC-4.2-01`.
+- **Traceability:** Connected Epic → Story → Test Case → Bug so a failed result can be followed back to its requirement in the [traceability matrix](traceability/SkyBook_Traceability_Matrix.csv).
 
 ## Tools used
 
@@ -34,14 +36,16 @@ I tested the [SkyBook practice booking app](https://claude.ai/code/artifact/5028
 
 ## Project files
 
-- [Test plan](docs/TEST_PLAN.md) · [Full execution report](docs/EXECUTION_REPORT.md) · [Bug reports](docs/BUG_REPORTS.md) · [Traceability](docs/TRACEABILITY.md)
-- [QA workbook](SkyBook_QA_Project.xlsx) · [Test cases CSV](test-cases/SkyBook_Test_Cases.csv) · [Bugs CSV](bugs/SkyBook_Bug_Reports.csv) · [Traceability CSV](traceability/SkyBook_Traceability_Matrix.csv)
+- [QA workbook](SkyBook_QA_Project.xlsx) — test cases, execution results, defects, and summary.
+- [Test cases CSV](test-cases/SkyBook_Test_Cases.csv) · [Bugs CSV](bugs/SkyBook_Bug_Reports.csv) · [Traceability CSV](traceability/SkyBook_Traceability_Matrix.csv) · [Detailed traceability workbook](traceability/SkyBook_Traceability_Matrix_Detailed.xlsx)
 - [Screenshot evidence gallery](screenshots/README.md) — Jira, Zephyr, application, and workbook images.
 
 ## Test evidence
 
-Zephyr shows the test library organized by Epic. The application screenshot captures BUG-14 with the Continue button enabled before all passengers have seats.
+Zephyr shows the test library organized by Epic. The Jira summary shows the project work items. The application screenshot captures BUG-14 with the Continue button enabled before all passengers have seats.
 
 ![Zephyr test case library](screenshots/zephyr-test-library.png)
+
+![Jira project summary](screenshots/jira-project-summary.png)
 
 ![BUG-14: Continue enabled with one of two passengers seated](screenshots/BUG-14-skybook-enabled-continue-button.png)
